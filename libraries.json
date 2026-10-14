@@ -1,0 +1,31 @@
+{
+  "formatVersion": 1,
+  "libraries": [
+    {
+      "id": "creakyhat.network-diagram",
+      "name": "Network diagram",
+      "description": "Routers, switches, access points, racks and the links between them, for home, office and data-centre network diagrams.",
+      "author": {
+        "name": "Creakyhat",
+        "url": "https://creakyhat.co.uk"
+      },
+      "licence": "CC-BY-4.0",
+      "category": "Infrastructure",
+      "tags": [
+        "network",
+        "router",
+        "switch",
+        "wifi",
+        "lan",
+        "wan",
+        "vpn",
+        "infrastructure"
+      ],
+      "items": 20,
+      "file": "libraries/infrastructure/network-diagram/network-diagram.atlasdrawlib",
+      "preview": "libraries/infrastructure/network-diagram/preview.png",
+      "size": 162709,
+      "sha256": "c7cbb15c74226e473fce754edad69da1b8106a17c322e5622cd563da43d585db"
+    }
+  ]
+}
