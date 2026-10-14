@@ -41,12 +41,10 @@ An AtlasDraw library is a UTF-8 JSON file with the extension `.atlasdrawlib` and
 | `tags` | no | Search words for the website. |
 | `items` | yes | The shapes. |
 
-Each item's `elements` are AtlasDraw elements, which use the Excalidraw element schema plus AtlasDraw extras
-(effects, curved paths and Markdown) in `customData`. `files` holds any images the elements use, keyed by file id.
+Each item's `elements` are the same elements an `.atlasdraw` drawing holds, with effects, curved paths and
+Markdown in `customData`. `files` holds any images the elements use, keyed by file id.
 Item ids must be unique: AtlasDraw skips an item that's already in the user's library, so reinstalling a
 library doesn't duplicate it.
 
 The details (`id` to `tags`) are optional in the format itself, so a plain export from AtlasDraw is valid. They're
 required for libraries published here.
-
-AtlasDraw also imports Excalidraw's `.excalidrawlib` files, but never writes them, and this repo doesn't hold them.
