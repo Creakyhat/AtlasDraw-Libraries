@@ -32,8 +32,7 @@ GitHub runs the same check on every push and pull request.
 
 ### Rules
 
-- Only `.atlasdrawlib` files. Excalidraw libraries aren't accepted: people who want those can get them from
-  Excalidraw and import them in AtlasDraw.
+- A library folder holds only its `.atlasdrawlib` file and `preview.png`.
 - Every library names its author and licence (`CC-BY-4.0`, `CC0-1.0` or `MIT`). Only submit work you made or
   have the right to share under that licence.
 - Item ids must be unique across the repo; prefix them with the library's publisher and name, e.g.

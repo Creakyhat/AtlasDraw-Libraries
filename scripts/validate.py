@@ -36,7 +36,7 @@ def check_library(path: Path, errors: list, item_ids: dict) -> dict | None:
         return None
 
     if data.get("type") != "atlasdrawlib":
-        fail('"type" must be "atlasdrawlib" (Excalidraw libraries don\'t belong in this repo)')
+        fail('"type" must be "atlasdrawlib"')
         return None
     if data.get("version") != FORMAT_VERSION:
         fail(f'"version" must be {FORMAT_VERSION}')
@@ -115,9 +115,9 @@ def main() -> int:
     entries = []
     library_ids = {}
 
-    stray = [p for p in ROOT.rglob("*.excalidrawlib") if ".git" not in p.parts]
-    for p in stray:
-        errors.append(f"{p.relative_to(ROOT).as_posix()}: Excalidraw libraries don't belong in this repo")
+    for p in sorted(LIBRARIES.rglob("*")):
+        if p.is_file() and p.suffix != ".atlasdrawlib" and p.name != "preview.png":
+            errors.append(f"{p.relative_to(ROOT).as_posix()}: only .atlasdrawlib files and preview.png belong under libraries/")
 
     for path in sorted(LIBRARIES.rglob("*.atlasdrawlib")):
         entry = check_library(path, errors, item_ids)
